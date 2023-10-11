@@ -1,0 +1,41 @@
+from sklearn.neighbors import KNeighborsClassifier
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+data = pd.read_csv('./DATA/well1.csv')
+data = data.dropna(how='any')
+
+X_train = data.iloc[:,1:4].values
+Y_train = data.iloc[:,-1].values
+
+model = KNeighborsClassifier(n_neighbors=5)
+model.fit(X_train,Y_train)
+
+X_test = X_train
+y_pred = model.predict(X_test)
+
+data = data.values
+mneumonics = [ 'RHOB', 'DT', 'GR', 'FACIES ORIG', 'FACIES PRED']
+rows,cols = 1,5
+fig,ax = plt.subplots(nrows=rows, ncols=cols, figsize=(12,10), sharey=True)
+for i in range(cols):
+    if i < cols-2:
+        ax[i].plot(data[:,i+1], data[:,0], linewidth = '0.5', color='b')
+        ax[i].set_ylim(max(data[:,0]), min(data[:,0]))
+        ax[i].set_title('%s' % mneumonics[i])
+        ax[i].minorticks_on()
+        ax[i].grid(which='major', linestyle='-', linewidth='0.5', color='lime')
+        ax[i].grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+    elif i==cols-2:
+        F = np.vstack((Y_train,Y_train)).T
+        ax[i].imshow(F, aspect='auto', extent=[0,1,max(data[:, 0]), min(data[:, 0])])
+        ax[i].set_title('%s' % mneumonics[i])
+    elif i==cols-1:
+        F = np.vstack((y_pred,y_pred)).T
+        ax[i].imshow(F, aspect='auto', extent=[0,1,max(data[:, 0]), min(data[:, 0])])
+        ax[i].set_title('%s' % mneumonics[i])
+y2 = data[:,3]  #GR
+y1 = y2*0+60 #60 API is Sand-Shale Boundary Line
+ax[2].fill_betweenx(data[:,0],y1,y2,where=(y1>=y2), color = 'gold', linewidth=0)
+ax[2].fill_betweenx(data[:,0],y1,y2,where=(y1<y2), color = 'lime', linewidth=0)
+plt.show()
