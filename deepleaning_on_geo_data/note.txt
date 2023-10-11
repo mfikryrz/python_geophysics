@@ -1,0 +1,9 @@
+Alat-alat yang diperlukan dalam ATSV boat
+1. Raspberry Pi Model 3B+ (s)
+2. DC brushless outrunner SunnySky X2212 (s)
+3. driver esc (Afro ESC 30A)
+4. Motor servo (s)
+5. Raspberry Pi Camera Module V2 (s)
+6. ADXL345 Accelerometer Module (s)
+7. Hobbywing UBEC-5V 6V
+8. ESP8266 WiFi Module
