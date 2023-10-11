@@ -6,13 +6,17 @@ Pengolahan data geofisika merupakan langkah kunci dalam memahami bumi dan sumber
 
 Proyek ini bertujuan untuk memfasilitasi pengolahan data geofisika dengan menyediakan berbagai alat, skrip, dan panduan yang membantu dalam berbagai tahap pengolahan data. Ini termasuk:
 
-### Pembacaan Data: Kami menyediakan skrip untuk membaca berbagai jenis data geofisika, seperti data seismic dan data porositas, dari berbagai format file yang umum digunakan.
+### Pembacaan Data: 
+Kami menyediakan skrip untuk membaca berbagai jenis data geofisika, seperti data seismic dan data porositas, dari berbagai format file yang umum digunakan.
 
-### Pembersihan Data: Data geofisika seringkali memerlukan pembersihan dan pra-pemrosesan. Kami menyediakan alat dan metode untuk membersihkan data dan mempersiapkannya untuk analisis lebih lanjut.
+### Pembersihan Data: 
+Data geofisika seringkali memerlukan pembersihan dan pra-pemrosesan. Kami menyediakan alat dan metode untuk membersihkan data dan mempersiapkannya untuk analisis lebih lanjut.
 
-### Pemodelan Data: Proyek ini mencakup skrip dan algoritma yang dapat digunakan untuk memodelkan data geofisika dan menggambarkan struktur bawah permukaan dengan lebih baik.
+### Pemodelan Data: 
+Proyek ini mencakup skrip dan algoritma yang dapat digunakan untuk memodelkan data geofisika dan menggambarkan struktur bawah permukaan dengan lebih baik.
 
-### Prediksi Data: Kami juga menyediakan alat dan teknik yang dapat digunakan untuk memprediksi data geofisika berdasarkan model yang telah dibuat.
+### Prediksi Data: 
+Kami juga menyediakan alat dan teknik yang dapat digunakan untuk memprediksi data geofisika berdasarkan model yang telah dibuat.
 
 ## Perhatian terhadap Ukuran Data
 Penting untuk dicatat bahwa sebagian besar data yang terkait dengan proyek ini memiliki ukuran yang sangat besar. Oleh karena itu, data yang sebenarnya mungkin tidak sepenuhnya ditampilkan di repositori ini. Kami akan memberikan petunjuk tentang cara mendapatkan data yang sesuai dan bagaimana data tersebut dapat digunakan dalam pengolahan data geofisika.
